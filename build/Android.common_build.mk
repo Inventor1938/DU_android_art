@@ -34,6 +34,11 @@ ART_BUILD_TARGET_DEBUG ?= false
 ART_BUILD_HOST_NDEBUG ?= true
 ART_BUILD_HOST_DEBUG ?= false
 
+ifneq ($(USE_DEX2OAT_DEBUG),false)
+ART_BUILD_TARGET_DEBUG ?= true
+ART_BUILD_HOST_DEBUG ?= true
+endif
+
 # Set this to change what opt level Art is built at.
 ART_DEBUG_OPT_FLAG ?= -O2
 ART_NDEBUG_OPT_FLAG ?= -O3
