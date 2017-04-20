@@ -42,7 +42,7 @@ endif
 
 # Set this to change what opt level Art is built at.
 ART_DEBUG_OPT_FLAG ?= -O2
-ART_NDEBUG_OPT_FLAG ?= -O3
+ART_NDEBUG_OPT_FLAG ?= -O3 -funroll-loops
 
 # Enable the static builds only for checkbuilds.
 ifneq (,$(filter checkbuild,$(MAKECMDGOALS)))
